@@ -1,0 +1,20 @@
+name: gpt-image-2
+provider: openai
+api_family: images
+preferred_endpoint: edits
+supports_reference_images: true
+supports_text_to_image: true
+supports_multiple_reference_images: true
+supports_masked_edits: true
+default_quality: high
+default_output_format: png
+default_aspect: 4:5
+default_size_map:
+  "1:1": "1024x1024"
+  "4:5": "1024x1280"
+  "9:16": "1024x1792"
+  "16:9": "1536x864"
+notes:
+  - Prefer edits/reference-image flow when model and product images are provided.
+  - GPT Image 2 handles image inputs at high fidelity automatically.
+  - Use prompt-only generation only when reference images are missing.
